@@ -6,3 +6,4 @@
 5. 5-printf.c prints statement using printf
 6. 6-size.c prints sizeof variables
 7. 100-intel generates assembly code of c file
+8. 101-quote.c prints to standard error
