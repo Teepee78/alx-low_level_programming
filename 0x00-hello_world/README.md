@@ -4,3 +4,4 @@
 3. 3-name compiles c file and creates exe file
 4. 4-puts.c prints statement using puts
 5. 5-printf.c prints statement using printf
+6. 6-size.c prints sizeof variables
