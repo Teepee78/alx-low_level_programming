@@ -2,3 +2,4 @@
 1. 1-compiler compiles c file without linking
 2. 2-assembler generates assembly code of c file
 3. 3-name compiles c file and creates exe file
+4. 4-puts.c prints statement
