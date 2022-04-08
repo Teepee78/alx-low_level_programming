@@ -4,3 +4,4 @@
 3. 3-print_alphabets.c prints all letters of the alphabet in lowercase, then uppercase
 4. 4-print_alphabt.c prints all letters of the alphabet in lowercase except q and e
 5. 5-print_numbers.c prints all single base 10 digits
+6. 6-print_numberz.c prints all single digit numbers with putchar and without using char
