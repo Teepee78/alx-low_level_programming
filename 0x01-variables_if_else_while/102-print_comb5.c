@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point
  *
  * Return: 0 (success)
@@ -8,7 +8,7 @@
 int main(void)
 {
 	int digit1a, digit1b, digit2a, digit2b;
-	
+
 	for (digit1a = 48; digit1a < 58; digit1a++)
 	{
 		for (digit1b = 48; digit1b < 58; digit1b++)
