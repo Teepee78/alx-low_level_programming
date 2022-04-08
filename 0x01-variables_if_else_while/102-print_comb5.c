@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (digit2a = digit1a; digit2a < 58; digit2a++)
 			{
-				for (digit2b = digit1b + 1; digit2b < 58; digit2b++)
+				for (digit2b = digit1b; digit2b < 58; digit2b++)
 				{
 					if ((digit2b == digit1b) && (digit1a == digit2a))
 					{
