@@ -6,3 +6,4 @@
 5. 5-print_numbers.c prints all single base 10 digits
 6. 6-print_numberz.c prints all single digit numbers with putchar and without using char
 7. 7-print_tebahpla.c prints all letters of the alphabet in lower casee, backwards, using putchar
+8. 8-print_base16.c prints all the numbers of base 16 in lowercase using putchar
