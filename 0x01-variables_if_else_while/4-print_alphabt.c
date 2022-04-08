@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	char alphabet = 97;
+	char alphabet;
 
-	while (alphabet < 123)
+	for (alphabet = 97; alphabet < 123; alphabet++)
 	{
 		if (alphabet == 101 || alphabet == 113)
 		{
@@ -18,7 +18,6 @@ int main(void)
 		{
 			putchar(alphabet);
 		}
-		alphabet++;
 	}
 	putchar('\n');
 	return (0);
