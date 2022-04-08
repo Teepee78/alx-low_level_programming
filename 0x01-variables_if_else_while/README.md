@@ -8,3 +8,4 @@
 7. 7-print_tebahpla.c prints all letters of the alphabet in lower casee, backwards, using putchar
 8. 8-print_base16.c prints all the numbers of base 16 in lowercase using putchar
 9. 9-print_comb.c prints combination of digits
+10. 100-print_comb3.c prints combination of double digits
