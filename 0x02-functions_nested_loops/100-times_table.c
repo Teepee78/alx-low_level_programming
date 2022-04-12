@@ -17,33 +17,32 @@ void print_times_table(int n)
 			if (n < 0 || n > 15)
 			{
 				break;
-			} else
-			{
-				result = i * j;
+			}
+			result = i * j;
 
-				if (i = n - 1 && j = n - 1)
+			if (i == n - 1 && j == n - 1)
+			{
+				if (result < 0)
 				{
-					if (result < 0)
+					_putchar(result + '0');
+					_putchar('\n');
+				} else
+				{
+					if (j == n - 1)
 					{
-						_putchar(result + '0');
+						_putchar((result / 10) + '0');
+						_putchar((result % 10) + '0');
 						_putchar('\n');
 					} else
 					{
-						if (j = n - 1)
-						{
-							_putchar(result/10 + '0');
-							_putchar(result%10 + '0');
-							_putchar('\n');
-						} else
-						{
-							_putchar(result/10 + '0');
-							_putchar(result%10 + '0');
-							_putchar(',');
-							_putchar(' ');
-						}
+						_putchar((result / 10) + '0');
+						_putchar((result % 10) + '0');
+						_putchar(',');
+						_putchar(' ');
 					}
 				}
 			}
 		}
 	}
+	return (0);
 }
