@@ -15,7 +15,7 @@ void fibonacci(int n)
 		return;
 	}
 	printf("%ld, ", f1);
-	for (i = 1; i < n; i++)
+	for (i = 1; i < (n - 1); i++)
 	{
 		printf("%ld, ", f2);
 
@@ -23,7 +23,7 @@ void fibonacci(int n)
 		f1 = f2;
 		f2 = next;
 	}
-	printf("\n");
+	printf("%ld\n", f2);
 }
 /**
  * main - entry point
