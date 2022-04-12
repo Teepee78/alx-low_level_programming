@@ -21,9 +21,10 @@ int fibonacci(int n)
 	} else if (n > 0)
 	{
 		result = fibonacci(n - 1) + fibonacci(n - 2);
-		printf("%d\n", result);
+		printf("%d, ", result);
 		return (result);
 	}
+	printf("\n");
 	return (0);
 }
 /**
