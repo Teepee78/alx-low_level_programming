@@ -11,4 +11,5 @@
 10. 10-add.c adds two integers and returns the result
 11. 11-print_to_98.c prints all natural numbers from n to 98, followed by a new line.
 12. 100-times_table.c prints n times table
-13. 101-natural.c print the sum of natural numbers between 0-1024
+13. 101-natural.c prints the sum of natural numbers between 0-1024
+14. 102-fibonacci.c prints the first 50 fibonacci numbers

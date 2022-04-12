@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+/**
+ * main - entry point
+ *
+ * Return: 0 (success)
+ */
+void fibonacci(int n)
+{
+	int result;
+
+	if (n == 1)
+	{
+		printf("1");
+	} else if (n == 2)
+	{
+		printf("2");
+	} else if (n > 0)
+	{
+		result = fibonacci(n - 1) + fibonacci(n - 2);
+		printf("%d\n", result);
+	} else
+	{
+		return (0);
+	}
+}
+
+int main(void)
+{
+	fibonacci(50);
+	return (0);
+}
