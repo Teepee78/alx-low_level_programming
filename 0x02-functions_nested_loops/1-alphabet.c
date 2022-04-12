@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_alphabet - prints all letters of the alphabet in lowercase
  *

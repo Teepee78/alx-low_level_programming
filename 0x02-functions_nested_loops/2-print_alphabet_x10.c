@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_alphabet_x10 - prints letters of the alphabet x10
  *
