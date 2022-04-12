@@ -4,6 +4,8 @@
 /**
  * _isalpha - checks if a character is an alphabet
  *
+ * @c: ascii character to be checked
+ *
  * Return - 1 if alphabetic, 0 otherwise
  */
 int _isalpha(int c)
