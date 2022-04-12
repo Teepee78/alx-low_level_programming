@@ -1,3 +1,5 @@
+#include <ctype.h>
+
 /**
  * _isalpha - checks if a character is an alphabet
  *
@@ -5,7 +7,7 @@
  */
 int _isalpha(int c)
 {
-	if (islpha(c) > 0)
+	if (isalpha(c) > 0)
 		return (1);
 	else
 		return (0);
