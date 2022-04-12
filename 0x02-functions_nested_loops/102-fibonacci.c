@@ -8,13 +8,13 @@
  */
 void fibonacci(int n)
 {
-	int f1 = 0, f2 = 1, i, next;
+	int f1 = 1, f2 = 2, i, next;
 
 	if (n < 1)
 	{
 		return;
 	}
-	printf("%d ", f1);
+	printf("%d, ", f1);
 	for (i = 1; i < n; i++)
 	{
 		printf("%d ", f2);
@@ -23,6 +23,7 @@ void fibonacci(int n)
 		f1 = f2;
 		f2 = next;
 	}
+	printf("\n");
 }
 /**
  * main - entry point
