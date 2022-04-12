@@ -8,13 +8,13 @@
  */
 void fibonacci(int n)
 {
-	int f1 = 1, f2 = 2, i, next;
+	long int f1 = 1, f2 = 2, i, next;
 
 	if (n < 1)
 	{
 		return;
 	}
-	printf("%d, ", f1);
+	printf("%ld, ", f1);
 	for (i = 1; i < n; i++)
 	{
 		printf("%ld, ", f2);
