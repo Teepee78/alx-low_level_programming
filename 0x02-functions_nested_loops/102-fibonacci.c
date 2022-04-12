@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- *
- * Return: 0 (success)
+ * fibonacci - prints fibonacci numbers
+ * @n: integer
  */
 void fibonacci(int n)
 {
@@ -19,12 +18,13 @@ void fibonacci(int n)
 	{
 		result = fibonacci(n - 1) + fibonacci(n - 2);
 		printf("%d\n", result);
-	} else
-	{
-		return (0);
 	}
 }
-
+/**
+ * main - entry point
+ *
+ * Return: (0) success
+ */
 int main(void)
 {
 	fibonacci(50);
