@@ -24,6 +24,7 @@ int fibonacci(int n)
 		printf("%d\n", result);
 		return (result);
 	}
+	return (0);
 }
 /**
  * main - entry point
