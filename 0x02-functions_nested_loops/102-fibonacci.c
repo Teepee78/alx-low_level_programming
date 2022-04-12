@@ -6,26 +6,23 @@
  *
  * Return: result
  */
-int fibonacci(int n)
+void fibonacci(int n)
 {
-	int result;
+	int f1 = 0, f2 = 1, i, next;
 
-	if (n == 1)
+	if (n < 1)
 	{
-		printf("1");
-		return (1);
-	} else if (n == 2)
-	{
-		printf("2");
-		return (2);
-	} else if (n > 0)
-	{
-		result = fibonacci(n - 1) + fibonacci(n - 2);
-		printf("%d, ", result);
-		return (result);
+		return;
 	}
-	printf("\n");
-	return (0);
+	printf("%d ", f1);
+	for (i = 1; i < n; i++)
+	{
+		printf("%d ", f2);
+
+		next = f1 + f2;
+		f1 = f2;
+		f2 = next;
+	}
 }
 /**
  * main - entry point
