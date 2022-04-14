@@ -8,3 +8,4 @@
 7. 7-print_diagonal.c draws a diagonal on the terminal
 8. 8-print_square.c prints a square
 9. 9-fizz_buzz.c Fizz Buzz test
+10. 10-print_triangle.c prints a triangle
