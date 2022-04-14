@@ -8,7 +8,7 @@ void more_numbers(void)
 	int i, j, first_number, second_number;
 
 	i = 0;
-	while (i < 11)
+	while (i < 10)
 	{
 		j = 0;
 		while (j < 15)
@@ -27,7 +27,6 @@ void more_numbers(void)
 			j++;
 		}
 		i++;
-		j = 0;
 		_putchar('\n');
 	}
 }
