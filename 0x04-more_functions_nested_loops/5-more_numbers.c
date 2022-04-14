@@ -17,14 +17,15 @@ void more_numbers(void)
 				first_number = j / 10;
 				second_number = j % 10;
 
-				_putchar(first_number);
+				_putchar(first_number + '0');
 			} else
 			{
 				second_number = j;
 			}
-			_putchar(second_number);
+			_putchar(second_number + '0');
 			j++;
 		}
 		i++;
+		_putchar('\n');
 	}
 }
