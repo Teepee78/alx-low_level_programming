@@ -5,3 +5,4 @@
 4. 4-print_most_numbers.c prints 0-9, except 2 and 4
 5. void more_numbers(void) prints 10x o - 14
 6. 6-print_line.c draws a straight line
+7. 7-print_diagonal.c draws a diagonal on the terminal
