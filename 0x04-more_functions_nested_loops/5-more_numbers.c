@@ -5,11 +5,12 @@
  */
 void more_numbers(void)
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 	int first_number, second_number;
 
 	while (i < 11)
 	{
+		j = 0;
 		while (j < 15)
 		{
 			if (j > 9)
