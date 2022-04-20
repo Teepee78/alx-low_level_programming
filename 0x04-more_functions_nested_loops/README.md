@@ -9,3 +9,4 @@
 8. 8-print_square.c prints a square
 9. 9-fizz_buzz.c Fizz Buzz test
 10. 10-print_triangle.c prints a triangle
+11. 100-prime_factor.c prints the largest prime factor of a number
