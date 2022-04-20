@@ -7,10 +7,8 @@
  */
 void rev_string(char *s)
 {
-	int i, j;
-
-	int k = strlen(s);
-	char new_s[k];
+	int i, j, sizenew_s, sizeint, lennew_s;
+	char new_s[200];
 
 	i = strlen(s) - 1;
 	j = 0;
@@ -21,9 +19,9 @@ void rev_string(char *s)
 		i--;
 	}
 
-	int sizenew_s = sizeof(new_s);
-	int sizeint = sizeof(int);
-	int lennew_s = sizenew_s / sizeint;
+	sizenew_s = sizeof(new_s);
+	sizeint = sizeof(int);
+	lennew_s = sizenew_s / sizeint;
 
 	new_s[lennew_s] = '\0';
 	*s = new_s;
