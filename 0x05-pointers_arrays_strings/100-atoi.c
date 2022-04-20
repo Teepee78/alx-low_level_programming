@@ -30,6 +30,12 @@ int _atoi(char *s)
 		if (is_numerical(s[i]))
 		{
 			number = (s[i] - 48) + number * 10;
+		} else
+		{
+			if (number > 0)
+			{
+				break;
+			}
 		}
 
 		if (s[i] == ' ')
