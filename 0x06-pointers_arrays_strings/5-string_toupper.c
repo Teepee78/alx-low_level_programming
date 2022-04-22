@@ -9,7 +9,7 @@ char _islower(char a)
 {
 	int i = a;
 
-	return (96 < i && i < 123);
+	return (i > 96 && i < 123);
 }
 
 char *string_toupper(char *str)
