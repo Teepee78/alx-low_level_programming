@@ -5,44 +5,31 @@
  * @str: string
  * Return: str
  */
-char *cap_string(char *str)
-{
-	int i;
+ char *cap_string(char *s)
+ {
+ 	int count = 0, i;
+ 	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	/* capitalize first character of words */
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		/* check first character is lowercase alphabet */
-		if (i == 0)
-		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-			/* subtract 32 to make it capital */
-			str[i] = str[i] - 32;
-			/* continue to the loop */
-			continue;
-		}
-		/* check space */
-		if (str[i] == ' ')
-		{
-			/* if space is found, check next character */
-			++i;
-			/* check next character is lowercase alphabet */
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				/* subtract 32 to make it capital */
-				str[i] = str[i] - 32;
-				/* continue to the loop */
-				continue;
-			}
-		} else
-		{
-			/* all other uppercase characters should be in lowercase */
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				/* subtract 32 to make it small/lowercase */
-				str[i] = str[i] + 32;
-			}
-		}
+ 	if (*(s + count) >= 97 && *(s + count) <= 122)
+ 	{
+		*(s + count) = *(s + count) - 32;
+ 		count++;
 	}
-	return (str);
-}
+
+ 	while (*(s + count) != '\0')
+ 	{
+ 		for (i = 0; i < 13; i++)
+ 		{
+ 			if (*(s + count) == separators[i])
+ 			{
+ 				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+				{
+ 					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+ 					break;
+				}
+ 			}
+ 		}
+ 		count++;
+ 	}
+ 	return (s);
+ }
