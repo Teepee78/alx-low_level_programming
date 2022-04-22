@@ -6,3 +6,5 @@
 5. 5-string_toupper.c changes uppercase letters to lowercase
 6. 6-cap_string.c capitalizes every word of a sring
 7. 7-leet.c encodes a string to 1337
+8. 100-rot13.c encodes a string using rot13
+9. 101-print_number.c prints a number
