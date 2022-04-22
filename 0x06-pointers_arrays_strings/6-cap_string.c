@@ -9,37 +9,40 @@ char *cap_string(char *str)
 {
 	int i;
 
-	char str[MAX]={0};	
-	int i;
-
 	/* capitalize first character of words */
-	for(i=0; str[i]!='\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		/* check first character is lowercase alphabet */
-		if(i==0)
+		if (i == 0)
 		{
-			if((str[i]>='a' && str[i]<='z'))
-			str[i]=str[i]-32; /* subtract 32 to make it capital */
-			continue; /* continue to the loop */
+			if ((str[i] >= 'a' && str[i] <= 'z'))
+			/* subtract 32 to make it capital */
+			str[i] = str[i] - 32;
+			/* continue to the loop */
+			continue;
 		}
-		if(str[i]==' ') /* check space */
+		/* check space */
+		if (str[i] == ' ')
 		{
 			/* if space is found, check next character */
 			++i;
 			/* check next character is lowercase alphabet */
-			if(str[i]>='a' && str[i]<='z')
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				str[i]=str[i]-32; /* subtract 32 to make it capital */
-				continue; /* continue to the loop */
+				/* subtract 32 to make it capital */
+				str[i]=str[i]-32;
+				/* continue to the loop */
+				continue;
 			}
 		} else
 		{
 			/* all other uppercase characters should be in lowercase */
-			if(str[i]>='A' && str[i]<='Z')
+			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
-				str[i]=str[i]+32; /* subtract 32 to make it small/lowercase */
+				/* subtract 32 to make it small/lowercase */
+				str[i]=str[i]+32;
 			}
 		}
 	}
-	return 0;
+	return (str);
 }
