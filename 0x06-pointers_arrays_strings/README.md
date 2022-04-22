@@ -4,3 +4,5 @@
 3. 3-strcmp.c compares 2 strings
 4. 4-rev_array.c reverses an array of integers
 5. 5-string_toupper.c changes uppercase letters to lowercase
+6. 6-cap_string.c capitalizes every word of a sring
+7. 7-leet.c encodes a string to 1337
