@@ -3,3 +3,4 @@
 2. 2-strncpy.c copies a string
 3. 3-strcmp.c compares 2 strings
 4. 4-rev_array.c reverses an array of integers
+5. 5-string_toupper.c changes uppercase letters to lowercase
