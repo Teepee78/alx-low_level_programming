@@ -30,7 +30,7 @@ char *cap_string(char *str)
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				/* subtract 32 to make it capital */
-				str[i]=str[i]-32;
+				str[i] = str[i] - 32;
 				/* continue to the loop */
 				continue;
 			}
@@ -40,7 +40,7 @@ char *cap_string(char *str)
 			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
 				/* subtract 32 to make it small/lowercase */
-				str[i]=str[i]+32;
+				str[i] = str[i] + 32;
 			}
 		}
 	}
