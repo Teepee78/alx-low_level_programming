@@ -12,10 +12,16 @@ char _islower(char a)
 	return (i > 96 && i < 123);
 }
 
+/**
+ * string_toupper - changes a string to uppercacse
+ * @str: pointer to string
+ * Return: str
+ */
 char *string_toupper(char *str)
 {
 	int i, j, len;
 
+	/* get length of string */
 	len = 0;
 	while (str[len] != '\0')
 	{
