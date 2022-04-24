@@ -2,7 +2,7 @@
 
 /**
  * leet - converts a string to 1337
- * @str: string to be converted
+ * @str: pointer string to be converted
  * Return: str
  */
 char *leet(char *str)
@@ -14,13 +14,13 @@ char *leet(char *str)
 	int numbers[] = {52, 51, 48, 55, 49};
 
 	/* iterate throught the string till you encounter NULL byte */
-	while (*(s + count) != '\0')
+	while (str[count] != '\0')
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (*(s + count) == lower_case[i] || *(s + count) == upper_case[i])
+			if (str[count] == lower_case[i] || str[count] == upper_case[i])
 			{
-				*(s + count) = numbers[i];
+				str[count] = numbers[i];
 				break;
 			}
 		}
