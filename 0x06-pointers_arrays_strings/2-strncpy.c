@@ -35,6 +35,7 @@ char *_strncpy(char *dest, char *src, int n)
 				j++;
 				i++;
 			}
+			break;
 		} else
 		{
 			dest[i] = src[j];
