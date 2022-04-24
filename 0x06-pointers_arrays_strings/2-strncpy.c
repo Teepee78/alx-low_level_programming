@@ -20,11 +20,25 @@ char *_strncpy(char *dest, char *src, int n)
 
 	/* copy n characters of src to dest */
 	j = 0;
-	while (j < n && src[j] != '\0')
+	/* while index is less than number of chars to be copied n */
+	while (j < n)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		/* if you encounter the NULL character at src, add null
+		characters to dest until n characters have been written */
+		if (src[j] == '\0')
+		{
+			while (j < n)
+			{
+				dest[i] = '\0';
+				j++;
+				i++;
+			}
+		} else
+		{
+			dest[i] = src[j];
+			i++;
+			j++;
+		}
 	}
 
 	dest[i] = '\0';
