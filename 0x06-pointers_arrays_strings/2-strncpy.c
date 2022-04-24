@@ -23,8 +23,10 @@ char *_strncpy(char *dest, char *src, int n)
 	/* while index is less than number of chars to be copied n */
 	while (j < n)
 	{
-		/* if you encounter the NULL character at src, add null
-		characters to dest until n characters have been written */
+		/**
+		 * if you encounter the NULL character at src, add null
+		 * characters to dest until n characters have been written
+		 */
 		if (src[j] == '\0')
 		{
 			while (j < n)
