@@ -9,42 +9,22 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
+	/* declare variable */
+	int i;
 
-	/* get length of dest */
-	i = 0;
-	while (dest[i] != '\0')
+	/* iterate throught string till null byte */
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		i++;
+		/* copy string */
+		dest[i] = src[i];
 	}
 
-	/* copy n characters of src to dest */
-	j = 0;
-	/* while index is less than number of chars to be copied n */
-	while (j < n)
+	/* iterate through string after null byte */
+	for (; i < n; i++)
 	{
-		/**
-		 * if you encounter the NULL character at src, add null
-		 * characters to dest until n characters have been written
-		 */
-		if (src[j] == '\0')
-		{
-			while (j < n)
-			{
-				dest[i] = '\0';
-				j++;
-				i++;
-			}
-			break;
-		} else
-		{
-			dest[i] = src[j];
-			i++;
-			j++;
-		}
+		/* add null byte */
+		dest[i] = '\0';
 	}
-
-	dest[i] = '\0';
 
 	return (dest);
 }
