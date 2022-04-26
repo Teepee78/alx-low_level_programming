@@ -8,25 +8,28 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	/* declare variables */
-	int i, j;
+	char *str1, *str2; /*Declaring pointer variables*/
 
 	/* iterate through haystack */
-	i = 0;
-	while (haystack[i] != '\0')
+	while (*haystack != '\0')
 	{
-		/* iterate through needle to confirm all chars match */
-		j = 0;
-		while (haystack[i] == needle[j] && needle[j] != '\0')
+		/* set str1 to haystack */
+		str1 = haystack;
+		str2 = needle;
+
+		/* iterate through needle */
+		while (*str2 != '\0' && *haystack == *str2)
 		{
-			i++;
-			j++;
+			/* increment haystack and needle */
+			haystack++;
+			str2++;
 		}
-		if (needle[j] == '\0')
+
+		if (*str2 == '\0')
 		{
-			return (haystack);
+			return (str1);
 		}
-		haystack + 1;
+		haystack = str1 + 1;
 	}
 	return (0);
 }
