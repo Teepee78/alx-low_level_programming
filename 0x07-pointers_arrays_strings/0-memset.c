@@ -11,6 +11,7 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	/* declare variables, i to count n, j to index s */
 	int i, j;
+	
 	j = 0;
 
 	for (i = 0; i < n; i++)
