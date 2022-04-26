@@ -10,7 +10,8 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	/* declare variables, i to count n, j to index s */
-	int i, j;
+	unsigned int i;
+	int j;
 
 	j = 0;
 
