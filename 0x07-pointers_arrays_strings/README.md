@@ -2,3 +2,5 @@
 1. 1-memcpy.c copies memory area.
 2. 2-strchr.c locates a character in a string
 3. 3-strspn.c gets the length of a prefix substring
+4. 4-strpbrk.c searches a string for a set of bytes
+5. 5-strstr.c locates a substring.
