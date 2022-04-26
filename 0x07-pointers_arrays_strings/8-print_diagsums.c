@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printdiagsums - prints the sum of a diagonal
+ * print_diagsums - prints the sum of a diagonal
  * @a: matrix
  * @size: size of a
  */
