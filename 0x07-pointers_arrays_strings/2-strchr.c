@@ -8,25 +8,13 @@
  */
 char *_strchr(char *s, char c)
 {
-	/* declare indexing variable, ret variable, len */
-	int i, len;
-	char *ret = 0;
-
-	/* get length of s */
-	len = 0;
-	while (s[len] != '\0')
+	while (*s != '\0')
 	{
-		len++;
-	}
-
-	/* search through s for c */
-	for (i = 0; i < len; i++)
-	{
-		if (c == s[i])
+		if (*s == c)
 		{
-			ret = &s[i];
-			break;
+			return (s);
 		}
+		s++;
 	}
-	return (ret);
+	return (0);
 }
