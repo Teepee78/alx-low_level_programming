@@ -8,7 +8,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	/* declare variables*/
+	/* declare variables */
 	int i;
 	int sum1, sum2;
 
@@ -16,7 +16,7 @@ void print_diagsums(int *a, int size)
 	sum2 = 0;
 
 	i = 0;
-	while (i < size) /*number repetitions*/
+	while (i < size)
 	{
 		/*sums for diagsums*/
 		sum1 += a[i];
