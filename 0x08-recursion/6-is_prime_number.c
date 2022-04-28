@@ -31,7 +31,7 @@ int is_prime_number(int n)
 
 	if (n < 2)
 		return (0);
-	if (num == 2)
+	if (n == 2)
 		return (1);
 	return (evaluate(i, n));
 }
