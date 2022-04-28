@@ -29,7 +29,7 @@ int p1(char *s, int len)
 	}
 
 	/* compare char with the char of the reversed string */
-	if (*s == *(s + len))
+	if (*s == *(s + (len - 1)))
 	{
 		/* keep comparing, till string is empty */
 		return (p1(s + 1, len - 1));
