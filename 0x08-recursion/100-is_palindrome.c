@@ -32,7 +32,7 @@ int p1(char *s, int len)
 	if (*s == *(s + (len - 1)))
 	{
 		/* keep comparing, till string is empty */
-		return (p1(s + 1, len - 1));
+		return (p1(s + 1, len - 2));
 	}
 	/* if both chars aren't equal, it is not a palindrome */
 	return (0);
