@@ -18,10 +18,11 @@ int main(int argc, char *argv[])
 		total = num1 * num2;
 
 		printf("%d\n", total);
-		return (0);
 	} else if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	return (0);
 }
