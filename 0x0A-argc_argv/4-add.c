@@ -7,7 +7,7 @@
  * check_num - check - string there are digit
  * @str: array str
  *
- * Return; Always 0 (Success)
+ * Return: 1 (Str is a digit)
  */
 int check_num(char *str)
 {
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 			sum += num;
 		} else
 		{
-			printf("Eror\n");
+			printf("Error\n");
 			return (1);
 		}
 
