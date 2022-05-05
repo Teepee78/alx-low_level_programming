@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 		lens2 = strlen(s2);
 	}
 
-	buffer = malloc(sizeof(char) * (lens1 + lens2 + 1))
+	buffer = malloc(sizeof(char) * (lens1 + lens2 + 1));
 	if (buffer == NULL)
 		return (NULL);
 
