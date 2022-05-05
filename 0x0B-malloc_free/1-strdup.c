@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 #include <string.h>
 
 /**
@@ -14,17 +13,17 @@ char *_strdup(char *str)
 	int i, lenstr;
 	char *buffer;
 
-	lenstr = strlen(str);
-
-	if (!str)
+	if (str == NULL)
 		return (NULL);
+
+	lenstr = strlen(str);
 
 	buffer = malloc(sizeof(char) * (lenstr + 1));
 
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; i < lenstr; i++)
 	{
 		buffer[i] = str[i];
 	}
