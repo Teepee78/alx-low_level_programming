@@ -27,7 +27,7 @@ char **strtow(char *str)
 	}
 	height += 1;
 
-	buffer = malloc(sizeof(char) * height);
+	buffer = malloc(sizeof(char *) * height);
 	if (buffer == NULL)
 		return (NULL);
 
@@ -59,6 +59,7 @@ char **strtow(char *str)
 			{
 				buffer[i][j] = '\0';
 				l++;
+				continue;
 			}
 		}
 	}
