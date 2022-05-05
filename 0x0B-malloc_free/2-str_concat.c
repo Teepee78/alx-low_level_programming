@@ -13,21 +13,15 @@ char *str_concat(char *s1, char *s2)
 	char *buffer;
 	unsigned int i, j, lens1, lens2;
 
-	if (s1 == NULL)
-	{
-		lens1 = 0;
-	} else
-	{
+	if (s1)
 		lens1 = strlen(s1);
-	}
+	else
+		s1 = "";
 
-	if (s2 == NULL)
-	{
-		lens2 = 0;
-	} else
-	{
+	if (s2)
 		lens2 = strlen(s2);
-	}
+	else
+		s2 = "";
 
 	buffer = malloc(sizeof(char) * (lens1 + lens2 + 1));
 	if (buffer == NULL)
