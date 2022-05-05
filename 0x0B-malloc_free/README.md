@@ -4,3 +4,4 @@
 3. 3-alloc_grid.c returns a pointer to a 2 dimensional array of integers
 4. 4-free_grid.c frees a 2 dimensional grid
 5. 100-argstostr.c concatenates all the arguments of your program
+6. 101-strtow.c splits a string into words
