@@ -39,7 +39,7 @@ char *argstostr(int ac, char **av)
 		buffer[k] = '\n';
 		k++;
 	}
-	buffer[count] = '\0';
+	buffer[k] = '\0';
 
 	return (buffer);
 }
