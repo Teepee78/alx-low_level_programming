@@ -31,7 +31,7 @@ char **strtow(char *str)
 	if (buffer == NULL)
 		return (NULL);
 
-		l = 0;
+	l = 0;
 	for (i = 0; i < height; i++)
 	{
 		count = 0;
