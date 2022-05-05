@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
@@ -28,19 +28,15 @@ char *argstostr(int ac, char **av)
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
-			if (av[i][j] == '\0')
-			{
-				buffer[k] = '\n';
-			} else
-			{
-				buffer[k] = av[i][j];
-			}
+			buffer[k] = av[i][j];
 			k++;
 		}
+		buffer[k] = '\n';
+		k++;
 	}
 	buffer[k] = '\0';
 
