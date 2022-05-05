@@ -10,7 +10,7 @@
 char **strtow(char *str)
 {
 	int i, j, k, l, height, len, count;
-	char *buffer;
+	char **buffer;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -27,7 +27,7 @@ char **strtow(char *str)
 	}
 	height += 1;
 
-	buffer = malloc(sizeof(char *) * height);
+	buffer = malloc(sizeof(char) * height);
 	if (buffer == NULL)
 		return (NULL);
 
