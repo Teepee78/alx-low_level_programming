@@ -14,13 +14,13 @@ char *_strdup(char *str)
 	char *buffer;
 
 	lenstr = 0;
-	while (str != '\0')
+	while (*str != '\0')
 	{
 		lenstr++;
 		str++;
 	}
 
-	if (lenstr == NULL)
+	if (lenstr == 0)
 		return (NULL);
 
 	buffer = malloc(sizeof(char) * lenstr);
