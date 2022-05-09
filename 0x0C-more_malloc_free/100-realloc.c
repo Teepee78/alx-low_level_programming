@@ -10,13 +10,12 @@ int lenarray(void *ptr)
 {
 	int len = 0;
 
-	while (ptr)
+	while (ptr[len])
 	{
 		len++;
-		ptr++;
 	}
 
-	return (ptr);
+	return (len);
 }
 
 /**
