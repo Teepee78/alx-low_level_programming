@@ -15,7 +15,10 @@ int _isdigit(char *str)
 	while (str[i])
 	{
 		if (str[i] < 48 || str[i] > 57)
-			return (0);
+		{
+			printf("Error\n");
+			exit(98);
+		}
 		i++;
 	}
 	return (1);
