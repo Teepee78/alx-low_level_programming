@@ -25,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= lens2)
 		n = lens2;
 
-	buffer = malloc(sizeof(s1) * (lens1 + n + 1));
+	buffer = malloc(sizeof(char) * (lens1 + n + 1));
 	if (buffer == NULL)
 		return (NULL);
 
