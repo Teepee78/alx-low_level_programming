@@ -9,7 +9,7 @@
  */
 int *array_range(int min, int max)
 {
-	int i, j, len;
+	int i, len;
 	int *buffer;
 
 	if (min > max)
@@ -20,10 +20,9 @@ int *array_range(int min, int max)
 	if (buffer == NULL)
 		return (NULL);
 
-	j = min;
-	for (i = 0; i < len; i++, j++)
+	for (i = 0; i < len; i++, min++)
 	{
-		buffer[i] = j;
+		buffer[i] = min;
 	}
 
 	return (buffer);
