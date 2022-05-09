@@ -2,6 +2,24 @@
 #include <stdlib.h>
 
 /**
+ * lenarray - gets length of array
+ * @ptr: pointer to array
+ * Return: length of array
+ */
+int lenarray(void *ptr)
+{
+	int len = 0;
+
+	while (ptr)
+	{
+		len++;
+		ptr++;
+	}
+
+	return (ptr);
+}
+
+/**
  * _realloc - reallocates memory using malloc and free
  * @ptr: pointer to previously allocated memory
  * @old_size: size of ptr
@@ -26,12 +44,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	/* get length of ptr */
-	while (ptr)
-	{
-		lenptr++;
-		ptr++;
-	}
+	/* get length of array */
+	lenptr = lenarray(ptr);
 
 	buffer = malloc(new_size);
 	if (buffer == NULL)
