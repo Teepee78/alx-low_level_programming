@@ -17,17 +17,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		buffer = malloc(new_size);
 		return (buffer);
-	} else
-	{
-		clone = ptr;
 	}
-
-	if (new_size == old_size)
+	else if (new_size == old_size)
+	{
 		return (ptr);
-	if (new_size == 0)
+	}
+	else if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
+	} else
+	{
+		clone = ptr;
 	}
 
 	buffer = malloc(new_size);
