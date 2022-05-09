@@ -10,7 +10,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i;
+	unsigned int i, max = new_size;
 	char *buffer, *clone;
 
 	if (ptr == NULL)
@@ -24,17 +24,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size == old_size)
 		return (ptr);
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	buffer = malloc(new_size * sizeof(char));
+	buffer = malloc(new_size);
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 0; (i < old_size) || (i < new_size); i++)
+	if (new_size > old_size)
+		max = old_size;
+
+	for (i = 0; i < max; i++)
 	{
 		buffer[i] = clone[i];
 	}
