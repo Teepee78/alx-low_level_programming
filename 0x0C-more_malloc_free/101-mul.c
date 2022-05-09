@@ -32,7 +32,7 @@ int _isdigit(char *str)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	unsigned long num1, num2;
 	unsigned long result;
 
 	if (argc != 3)
