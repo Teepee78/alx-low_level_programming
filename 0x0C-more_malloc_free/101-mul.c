@@ -9,12 +9,10 @@
  */
 int _isdigit(char *str)
 {
-	int i, len;
+	int i;
 
-	len = strlen(str);
-
-	i = 0
-	while (i < len)
+	i = 0;
+	while (str[i])
 	{
 		if (str[i] < 48 || str[i] > 57)
 			return (0);
@@ -31,23 +29,30 @@ int _isdigit(char *str)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2;
+	unsigned long result;
 
 	if (argc != 3)
+	{
 		printf("Error\n");
 		exit(98);
+	}
 
 	if (!_isdigit(argv[1]))
+	{
 		printf("Error\n");
 		exit(98);
+	}
 	if (!_isdigit(argv[2]))
+	{
 		printf("Error\n");
 		exit(98);
+	}
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
 	result = num1 * num2;
 
-	printf("%d\n", result);
+	printf("%ld\n", result);
 	return (0);
 }
