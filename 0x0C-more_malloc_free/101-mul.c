@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * _isdigit - checks if a string contains only digits
@@ -32,7 +31,6 @@ int _isdigit(char *str)
  */
 int main(int argc, char *argv[])
 {
-	unsigned long num1, num2;
 	unsigned long result;
 
 	if (argc != 3)
@@ -52,9 +50,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = atol(argv[1]);
-	num2 = atol(argv[2]);
-	result = num1 * num2;
+	result = atol(argv[1]) * atol(argv[2]);
 
 	printf("%lu\n", result);
 	return (0);
