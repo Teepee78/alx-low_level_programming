@@ -10,7 +10,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i, lenptr = 0;
+	unsigned int i;
 	char *buffer, *clone;
 
 	if (ptr == NULL)
