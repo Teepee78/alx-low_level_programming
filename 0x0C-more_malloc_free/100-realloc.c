@@ -48,7 +48,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	/* get length of array */
 	lenptr = lenarray(clone);
 
-	buffer = malloc(new_size * sizeof(char));
+	buffer = malloc(new_size * sizeof(unsigned int));
 	if (buffer == NULL)
 		return (NULL);
 
