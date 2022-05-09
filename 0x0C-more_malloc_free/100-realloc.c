@@ -32,16 +32,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	clone = ptr;
 
-	if (ptr == NULL)
+	if (clone == NULL)
 	{
 		buffer = malloc(new_size);
 		return (buffer);
 	}
 	if (new_size == old_size)
 		return (clone);
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0 && clone != NULL)
 	{
 		free(ptr);
+		free(clone);
 		return (NULL);
 	}
 
@@ -52,7 +53,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 0; i < lenptr + 1; i++)
+	for (i = 0; i < lenptr; i++)
 	{
 		buffer[i] = clone[i];
 	}
