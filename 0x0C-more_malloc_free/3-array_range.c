@@ -21,7 +21,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	j = min;
-	for (i = 0; i < len + 1; i++, j++)
+	for (i = 0; i < len; i++, j++)
 	{
 		buffer[i] = j;
 	}
