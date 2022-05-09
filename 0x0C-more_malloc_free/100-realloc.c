@@ -6,7 +6,7 @@
  * @ptr: pointer to array
  * Return: length of array
  */
-int lenarray(void *ptr)
+int lenarray(char *ptr)
 {
 	int len = 0;
 
@@ -27,8 +27,10 @@ int lenarray(void *ptr)
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i, j, lenptr = 0;
-	void *buffer;
+	unsigned int i, lenptr = 0;
+	char *buffer, *clone;
+
+	clone = ptr;
 
 	if (ptr == NULL)
 	{
@@ -36,15 +38,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (buffer);
 	}
 	if (new_size == old_size)
-		return (ptr);
-	if (new_size == 0 & ptr != NULL)
+		return (clone);
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
 	/* get length of array */
-	lenptr = lenarray(ptr);
+	lenptr = lenarray(clone);
 
 	buffer = malloc(new_size);
 	if (buffer == NULL)
@@ -52,7 +54,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	for (i = 0; i < lenptr + 1; i++)
 	{
-		buffer[i] = ptr[i];
+		buffer[i] = clone[i];
 	}
 
 	free(ptr);
