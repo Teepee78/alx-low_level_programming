@@ -13,7 +13,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	/* declare variables */
-	unsigned int nl, ol;
+	unsigned int nl, ol, i;
 	dog_t *dog;
 
 	/* if name of dog or name of owner is null */
@@ -34,7 +34,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	dog->name = name;
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
 	dog->age = age;
 	/* get length of owner and add null byte */
 	for (ol = 0; owner[ol]; ol++)
@@ -48,6 +49,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	dog->owner = owner;
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
 	return (dog);
 }
