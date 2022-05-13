@@ -1,7 +1,6 @@
 #ifndef FUNC
 #define FUNC
-
-typedef int size_t;
+#include <stddef.h>
 
 int _putchar(char c);
 
