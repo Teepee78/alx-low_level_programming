@@ -5,8 +5,6 @@
 /**
  * get_op_func - gets correct function
  * @s: operator
- * @a: number 1
- * @b: number 2
  * Return: correct function
  */
 int (*get_op_func(char *s))(int, int)
