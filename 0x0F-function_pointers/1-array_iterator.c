@@ -9,8 +9,6 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	typedef int size_t;
-
 	size_t i;
 
 	for (i = 0; i < size; i++)

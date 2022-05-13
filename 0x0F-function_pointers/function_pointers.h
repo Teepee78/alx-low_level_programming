@@ -1,6 +1,8 @@
 #ifndef FUNC
 #define FUNC
 
+typedef int size_t;
+
 int _putchar(char c);
 
 void print_name(char *name, void (*f)(char *));
