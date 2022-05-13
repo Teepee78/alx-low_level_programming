@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * name - prints a name
+ * print_name - prints a name
  * @name: name to be printed
  * @f: function to be called
  */
