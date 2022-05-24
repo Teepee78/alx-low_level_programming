@@ -2,3 +2,4 @@
 1. 1-list_len.c returns the number of elements in a linked list.
 2. 2-add_node.c adds a new node at the beginning of a linked list.
 3. 3-add_node_end.c adds a new node at the end of a linked list.
+4. 4-free_list.c frees a list_t list.
