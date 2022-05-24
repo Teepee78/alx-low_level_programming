@@ -4,3 +4,4 @@
 3. 3-add_node_end.c adds a new node at the end of a linked list.
 4. 4-free_list.c frees a list_t list.
 5. 100-first.c prints a string before the main function is executed.
+6. 101-hello_holberton.asm prints "Hello, Holberton".
