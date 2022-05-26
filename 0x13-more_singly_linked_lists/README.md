@@ -8,3 +8,4 @@
 7. 7-get_nodeint.c returns the nth node of a linked list.
 8. 8-sum_listint.c returns the sum of all the data in a linked list.
 9. 9-insert_nodeint.c inserts a node at a given position.
+10. 10-delete_nodeint.c deletes a node at index of a linked list.
