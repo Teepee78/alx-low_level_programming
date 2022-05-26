@@ -5,3 +5,4 @@
 4. 4-free_listint.c frees a linked list.
 5. 5-free_listint2.c frees  a linked list.
 6. 6-pop_listint.c deletes the head node of a linked list and returns it's data.
+7. 7-get_nodeint.c returns the nth node of a linked list.
