@@ -11,3 +11,4 @@
 10. 10-delete_nodeint.c deletes a node at index of a linked list.
 11. 100-reverse_listint.c reverses a linked list.
 12. 101-print_listint_safe.c prints a linked list.
+13. 102-free_listint_safe.c frees a linked list.
