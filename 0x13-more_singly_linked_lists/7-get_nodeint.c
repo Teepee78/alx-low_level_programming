@@ -20,9 +20,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		temp = temp->next;
 	}
 
-	for (i = 0; i < index; i++)
+	temp = head;
+
+	for (i = 0; temp && i < index; i++)
 	{
-		head = head->next;
+		temp = temp->next;
 	}
 
 	return (head);
