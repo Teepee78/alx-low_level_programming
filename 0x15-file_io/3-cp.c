@@ -45,8 +45,6 @@ int main(int ac, char *av[])
 	}
 	file_to = close(file_to);
 	if (file_to == -1)
-	{
 		dprintf(STDERR_FILENO, "Can't close fd %s\n", av[2]), exit(100);
-	}
 	return (0);
 }
