@@ -31,7 +31,7 @@ int main(int ac, char *av[])
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		}
 		writefile_to = write(file_to, buffer, readfile_from);
-		if (writefile_to == -1)
+		if (writefile_to == -1 || writefile_to != readfile_from)
 		{
 			close(file_from), close(file_to);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
