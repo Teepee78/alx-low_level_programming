@@ -10,7 +10,6 @@ int main(int ac, char *av[])
 {
 	int file_from, file_to, readfile_from, writefile_to;
 	char buffer[1024];
-	/*mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;*/
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]), exit(97);
