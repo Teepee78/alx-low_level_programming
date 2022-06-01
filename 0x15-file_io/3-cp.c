@@ -10,14 +10,14 @@ int main(int ac, char *av[])
 {
 	int file_from, file_to, readfile_from, writefile_to;
 	char buffer[1024];
-	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	/*mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;*/
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]), exit(97);
 	file_from = open(av[1], O_RDONLY);
 	if (file_from  == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		close(file_from);
