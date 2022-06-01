@@ -38,13 +38,13 @@ int main(int ac, char *av[])
 		}
 	} while (readfile_from == 1024);
 	file_from = close(file_from);
-	if (file_from == -1)
+	if (file_from < 0)
 	{
 		close(file_to);
 		dprintf(STDERR_FILENO, "Can't close fd %s\n", av[1]), exit(100);
 	}
 	file_to = close(file_to);
-	if (file_to == -1)
+	if (file_to < 0)
 		dprintf(STDERR_FILENO, "Can't close fd %s\n", av[2]), exit(100);
 	return (0);
 }
