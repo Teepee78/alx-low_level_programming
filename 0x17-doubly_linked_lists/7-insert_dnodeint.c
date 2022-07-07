@@ -9,7 +9,7 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int length = 0, i;
+	unsigned int i;
 	dlistint_t *list = *h, *new;
 
 	if (h == NULL)
