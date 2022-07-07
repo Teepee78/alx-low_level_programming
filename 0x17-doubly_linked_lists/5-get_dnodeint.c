@@ -11,6 +11,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	unsigned int length, i;
 	dlistint_t *temp = head;
 
+	if (head == NULL)
+		return (NULL);
 	/* get length of list */
 	while (temp->next != NULL)
 	{
