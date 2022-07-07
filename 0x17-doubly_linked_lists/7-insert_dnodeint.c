@@ -12,7 +12,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int length = 0, i;
 	dlistint_t *temp = *h, *list = *h, *new;
 
-	if (h == NULL || *h == NULL)
+	if (h == NULL)
 		return (NULL);
 
 	/* get length of list and check index */
