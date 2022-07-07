@@ -7,3 +7,5 @@
 6. 6-sum_dlistint.c return the sum of all data in a doubly linked list
 7. 7-insert_dnodeint.c inserts a new node at a given position
 8. 8-delete_dnodeint.c deletes the node at index of a doubly linked list
+9. 100-password password for crackme
+10. 102-result largest palindrome that is a product of two 3-digit numbers
