@@ -8,24 +8,13 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int length, i;
-	dlistint_t *temp = head;
+	unsigned int i;
 
 	if (head == NULL)
 		return (NULL);
-	/* get length of list */
-	while (temp->next != NULL)
-	{
-		length++;
-		temp = temp->next;
-	}
-	length++;
-
-	if (index > (length - 1))
-		return (NULL);
 
 	/* iterate till element */
-	for (i = 0; i < index; i++)
+	for (i = 0; head != NULL && i < index; i++)
 		head = head->next;
 
 	return (head);
