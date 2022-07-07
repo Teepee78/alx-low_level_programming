@@ -10,19 +10,9 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int length = 0, i;
-	dlistint_t *temp = *h, *list = *h, *new;
+	dlistint_t *list = *h, *new;
 
 	if (h == NULL)
-		return (NULL);
-
-	/* get length of list and check index */
-	while (temp->next != NULL)
-	{
-		length++;
-		temp = temp->next;
-	}
-	length++;
-	if (idx > (length - 1))
 		return (NULL);
 
 	if (idx == 0)
