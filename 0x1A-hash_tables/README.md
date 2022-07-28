@@ -29,3 +29,7 @@ prints a hash table
 ### 6-hash_table_delete.c
 
 deletes a hash table
+
+### 100-sorted_hash_table.c
+
+creates a sorted hash table
