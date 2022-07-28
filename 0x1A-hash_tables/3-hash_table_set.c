@@ -19,14 +19,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
 	/* Check if key exists */
-	for (temp = ht->array[index]; temp != NULL; temp = temp->next)
+	for (temp = ht->array[idx]; temp != NULL; temp = temp->next)
 	{
 		if (strcmp(temp->key, key) == 0) /* key exists */
 		{
-			if (strcmp(current->value, value) != 0) /* value is different */
+			if (strcmp(temp->value, value) != 0) /* value is different */
 			{
-				free(current->value);
-				current->value = strdup(value);
+				free(temp->value);
+				temp->value = strdup(value);
 			}
 			return (1);
 		}
@@ -60,7 +60,7 @@ hash_node_t *create_node(const char *key, const char *value)
 	node->key = strdup(key);
 	if (node->key == NULL)
 	{
-		free(new);
+		free(node);
 		return (NULL);
 	}
 	node->value = strdup(value);
