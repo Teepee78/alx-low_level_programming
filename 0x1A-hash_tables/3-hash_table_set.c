@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
-	hash_node_t *node;
+	hash_node_t *node, *temp;
 
 	if (ht == NULL) /* hash table is empty */
 		return (0);
@@ -18,35 +18,57 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
-	/* create node */
-	node = malloc(sizeof(hash_node_t));
+	/* Check if key exists */
+	for (temp = ht->array[index]; temp != NULL; temp = temp->next)
+	{
+		if (strcmp(temp->key, key) == 0) /* key exists */
+		{
+			if (strcmp(current->value, value) != 0) /* value is different */
+			{
+				free(current->value);
+				current->value = strdup(value);
+			}
+			return (1);
+		}
+	}
+	/* create node if key doesn't exist */
+	node = create_node(key, value);
 	if (node == NULL)
 		return (0);
-	node->key = malloc(sizeof(char *) * strlen(key));
-	if (node->key == NULL)
-	{
-		free(node);
-		return (0);
-	}
-	strcpy(node->key, key);
-	node->value = malloc(sizeof(char *) * strlen(value));
-	if (node->value == NULL)
-	{
-		free(node->key), free(node);
-		return (0);
-	}
-	strcpy(node->value, value); /* copy value */
-
-	/* check for collision */
-	if (ht->array[idx] != NULL) /* index is not empty */
-	{
-		node->next = ht->array[idx];
-		ht->array[idx] = node;
-	} else /* index is empty */
-	{
-		node->next = NULL;
-		ht->array[idx] = node;
-	}
+	node->next = ht->array[idx];
+	ht->array[idx] = node;
 
 	return (1);
+}
+
+/**
+ * create_node - creates a new hash node
+ * @key: key to add
+ * @value: value to add
+ *
+ * Return: pointer to new node, or NULL if fail
+ */
+hash_node_t *create_node(const char *key, const char *value)
+{
+	hash_node_t *node;
+
+	if (key == NULL || value == NULL || strcmp(key, "") == 0)
+		return (NULL);
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
+		return (NULL);
+	node->key = strdup(key);
+	if (node->key == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
+	node->value = strdup(value);
+	if (node->value == NULL)
+	{
+		free(node->key);
+		free(node);
+		return (NULL);
+	}
+	return (node);
 }
