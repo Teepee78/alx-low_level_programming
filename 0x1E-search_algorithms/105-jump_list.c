@@ -10,43 +10,34 @@
 */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	listint_t *head = list, *prev = list;
-	size_t jump, i = 0, start, next;
+	size_t jump, i, jumpi;
+	listint_t *prev, *current;
 
-	if (head == NULL || size < 1)
+	if (list == NULL)
 		return (NULL);
-
-	/* Jump Search */
-	start = 0;
 	jump = sqrt(size);
-	while (head->index != jump)
-		head = head->next;
-	if (head->n >= value)
-		printf("Value checked array[%lu] = [%d]\n", jump, head->n);
-	for (i = jump; i < size && head->n < value; i += jump)
+	jumpi = 0;
+	current = list;
+	for (i = 0; i < size; i++)
 	{
-		start = i;
-		printf("Value checked array[%lu] = [%d]\n", i, head->n);
-		if (head->n == value)
-			return (head);
-		/* Jump to next index */
-		prev = head;
-		next = i + jump;
-		if (next > size)
-			next = size - 1;
-		while (head->index != next && head->next != NULL)
-			head = head->next;
+		if (current->index == jumpi)
+		{
+			if (current->n >= value)
+			{
+				break;
+			}
+			printf("Value checked at index [%lu] = [%d]\n", i, current->n);
+			jumpi += jump;
+			prev = current;
+		}
+		current = current->next;
 	}
-	if (i >= size)
-		i = size - 1;
-	printf("Value found between indexes [%lu] and [%lu]\n", start, i);
-	/* Linear search */
-	for (; start <= i && start < size; start++)
+	printf("Value found between indices [%lu] and [%lu]\n", prev->index, i);
+	for (i = prev->index; prev->index <= current->index; prev = prev->next, i++)
 	{
-		printf("Value checked array[%lu] = [%d]\n", start, prev->n);
+		printf("Value checked at index [%lu] = [%d]\n", i, prev->n);
 		if (prev->n == value)
 			return (prev);
-		prev = prev->next;
 	}
 	return (NULL);
 }
