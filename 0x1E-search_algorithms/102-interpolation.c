@@ -40,8 +40,6 @@ int interpolation_recursive(int *array, size_t low, size_t high, int value)
 */
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t pos, high = size - 1, low = 0;
-
 	if (array == NULL || size < 1)
 		return (-1);
 
